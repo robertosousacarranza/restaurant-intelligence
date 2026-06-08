@@ -43,6 +43,7 @@ def ejecutar_pipeline(ruta_datos="data/transacciones_raw.csv"):
     df_menu = run_menu_engineering(df)
     
     # ── Guardar resultados para el dashboard ──
+    guardar_dataset(df, "data/transacciones_con_clusters.csv")
     demanda_diaria.to_csv("data/demanda_diaria.csv", index=False)
     demanda_horaria.to_csv("data/demanda_horaria.csv", index=False)
     pronostico.to_csv("data/pronostico_semanal.csv", index=False)
